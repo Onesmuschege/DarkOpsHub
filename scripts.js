@@ -217,4 +217,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 30);
         */
     }
+
+    // Cookie Consent Banner
+    const cookieConsent = document.getElementById("cookie-consent");
+    const acceptCookies = document.getElementById("accept-cookies");
+
+    acceptCookies.addEventListener("click", () => {
+        cookieConsent.style.display = "none";
+        localStorage.setItem("cookiesAccepted", "true");
+    });
+
+    if (!localStorage.getItem("cookiesAccepted")) {
+        cookieConsent.style.display = "block";
+    }
+
+    // Security Advisory Modal
+    const modal = document.getElementById("security-advisory-modal");
+    const closeModal = document.querySelector(".close-modal");
+
+    if (modal && closeModal) {
+        closeModal.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        // Example: Show modal on page load (can be triggered conditionally)
+        modal.style.display = "flex";
+    }
 });

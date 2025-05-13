@@ -10,6 +10,13 @@
     <title>DarkOpsHub</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data:; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 </head>
 <body>
     <!-- Header Section -->
@@ -43,6 +50,12 @@
             </div>
         </div>
     </header>
+
+    <!-- SSL/Security Indicator -->
+    <div class="security-badge">
+        <i class="fas fa-lock"></i>
+        <span>This site is protected with SSL encryption</span>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -227,6 +240,48 @@
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
     </section>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" class="cookie-consent">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept," you consent to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="cookie-btn accept">Accept</button>
+                <button id="cookie-settings" class="cookie-btn settings">Cookie Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Advisory Modal -->
+    <div id="security-advisory-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Latest Security Advisory</h2>
+            <div class="advisory-content">
+                <div class="advisory-severity high">
+                    <span class="severity-indicator"></span>
+                    <span class="severity-text">High Severity</span>
+                </div>
+                <h3>Critical Vulnerability in OpenSSL (CVE-2025-XXXX)</h3>
+                <p class="advisory-date">Published: May 12, 2025</p>
+                <p>A critical vulnerability has been discovered in OpenSSL versions prior to 3.2.0 that could allow remote attackers to execute arbitrary code. We recommend immediate patching to the latest version.</p>
+                <div class="advisory-details">
+                    <h4>Affected Systems:</h4>
+                    <ul>
+                        <li>OpenSSL versions 3.0.0 to 3.1.9</li>
+                        <li>Systems using TLS with affected OpenSSL versions</li>
+                    </ul>
+                    <h4>Recommended Actions:</h4>
+                    <ul>
+                        <li>Update to OpenSSL 3.2.0 or later immediately</li>
+                        <li>Apply vendor patches as they become available</li>
+                        <li>Monitor systems for unusual activity</li>
+                    </ul>
+                </div>
+                <a href="#" class="btn-primary">Read Full Advisory</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Section -->
     <footer>
