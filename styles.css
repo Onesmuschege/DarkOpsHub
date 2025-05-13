@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #04032b;
+    padding: 15px;
+    position:relative;
+}
+
+header .logo img {
+    width: 150px;
+}
+/* Floating Swipe Images Styles */
+.floating-swipe-images {
+    position: relative;
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height to fit your layout */
+    overflow: hidden;
+}
+
+.swipe-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the whole div */
+    opacity: 0;
+    animation: swipe 12s infinite;
+}
+
+/* Each image will appear in sequence */
+.swipe-img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.swipe-img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.swipe-img:nth-child(3) {
+    animation-delay: 8s;
+}
+
+/* Swipe Animation */
+@keyframes swipe {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    25% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    30% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Menu Styles */
+#menu {
+    position:left;
+
+}
+
+.menu-toggle {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    width: auto;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-x: auto;
+}
+#menu.open .menu-content {
+    display: block;
+}
+
+.menu-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-content ul li {
+    padding: 10px;
+}
+
+.menu-content ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-content ul li a:hover {
+    color: #ff6600;
+}
+@media (max-width: 768px){
+    .menu-content{
+        max-width: 100%;
+        left: 0;
+        padding: 10px;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: rgba(173, 34, 34, 0.788);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url(DarkOpsHub/DOH3.png) no-repeat center center/cover;
+    color: white;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cta-button:before{
+    background: #021aa1;
+    height: 150px;
+    width: 200px;
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+.cta-button:hover ::before {
+    top: -30px; 
+    left: -30px;
+}
+
+.cta-button:active::before {
+    background-color: #ff6600;
+    transition:background 0s;
+}
+
+/* Services Section */
+.services {
+    padding: 50px;
+    background-color:#150e44fa;
+}
+
+.services h2 {
+    color: #ff6600;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+.service-item {
+    background-color:  #22149c;
+    color: #f9f9e5;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(36, 6, 6, 0.911);
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s ease;
+    max-width: 300px;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Layout for Services (Flexbox) */
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* About Section */
+.about {
+    padding: 50px;
+    text-align: center;
+    background-color: #d8d4d4;
+}
+
+/* Contact Section */
+.contact {
+    padding: 30px;
+    background-color: #22149c;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #460505;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer .socials {
+    margin-top: 10px;
+}
+
+footer .socials a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
