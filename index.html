@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="DarkOpsHub - Discrete Security For a Digital World. Learn about our cybersecurity services and training programs.">
+    <meta name="keywords" content="cybersecurity, training, phishing, security workshops, DarkOpsHub">
+    <meta name="author" content="DarkOpsHub">
     <title>DarkOpsHub</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <div class="logo"><img src="DarkOpsHub/DarkOpsHub_Logo.png" alt="DarkOpsHub">
-        <p>Discrete Security For a Digital World</p>
-        
+        <div class="logo">
+            <img src="DarkOpsHub/DarkOpsHub_Logo.png" alt="DarkOpsHub Logo">
+            <p>Discrete Security For a Digital World</p>
         </div>
         <div class="floating-swipe-images">
-            <img src="images/cybersecurity-icon.png" alt="Cybersecurity" class="swipe-img">
-            <img src="images/data-encryption-icon.png" alt="Data Encryption" class="swipe-img">
-            <img src="images/network-monitoring-icon.png" alt="Network Monitoring" class="swipe-img">
+            <img src="images/cybersecurity-icon.png" alt="Cybersecurity Icon" class="swipe-img">
+            <img src="images/data-encryption-icon.png" alt="Data Encryption Icon" class="swipe-img">
+            <img src="images/network-monitoring-icon.png" alt="Network Monitoring Icon" class="swipe-img">
         </div>
         <div id="menu">
             <button class="menu-toggle" id="menuToggle" aria-controls="menuContent" aria-expanded="false">Menu</button>
             <div class="menu-content" id="menuContent">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li>
-                        <a href="#" class="dropdown-toogle">Services</a>
-                    <ul class="dropdown">
-                        <li>Service 1</li>
-                        <li>Service 1</li>
-                        <li>Service 1</li>
-                        <li>Service 1</li>
-                    </ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="dropdown-parent">
+                        <a href="#" class="dropdown-toggle">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="#services">Phishing Simulations</a></li>
+                            <li><a href="#services">Security Workshops</a></li>
+                            <li><a href="#services">Policy Development</a></li>
+                            <li><a href="#services">Incident Response</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -43,39 +48,198 @@
     <section class="hero">
         <h1>DarkOpsHub</h1>
         <p>Discrete Security For a Digital World</p>
-        <a href="#" class="cta-button">Learn More</a>
+        <a href="#about" class="cta-button">Learn More</a>
     </section>
 
+    
     <!-- About Section -->
-    <section class="about">
+    <section id="about" class="about">
         <h2>About Us</h2>
-        <p>At DarkOpsHub, we are dedicated to empowering individuals and organizations with the knowledge and tools needed to protect against cyber threats. As a leading cybersecurity awareness company, we specialize in providing comprehensive training programs, cutting-edge resources, and expert guidance to help you stay one step ahead of cybercriminals.
-
-        </p>
+        <p>At DarkOpsHub, we are dedicated to empowering individuals and organizations with the knowledge and tools needed to protect against cyber threats. As a leading cybersecurity awareness company, we specialize in providing comprehensive training programs, cutting-edge resources, and expert guidance to help you stay one step ahead of cybercriminals.</p>
         <p>Our mission is to create a safer digital environment by fostering a culture of cybersecurity awareness. We offer tailored solutions that address the unique needs of businesses, educational institutions, and government agencies. From phishing simulations and security workshops to policy development and incident response planning, our services are designed to enhance your cybersecurity posture.</p>
     </section>
 
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <h2>Cybersecurity By The Numbers</h2>
+            <p class="section-description">The threat landscape is constantly evolving. Stay informed with the latest statistics.</p>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-number" data-count="70">0</div>
+                    <div class="stat-percent">%</div>
+                    <p class="stat-description">Of businesses experienced a cyberattack in the past year</p>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number" data-count="287">0</div>
+                    <div class="stat-text">Days</div>
+                    <p class="stat-description">Average time to identify and contain a data breach</p>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-number" data-count="4">0</div>
+                    <div class="stat-text">Million</div>
+                    <p class="stat-description">Average cost of a data breach in 2025</p>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-percent">%</div>
+                    <p class="stat-description">Of breaches are caused by human error</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section class="services">
+    <section id="services" class="services">
         <h2>Our Services</h2>
-        <!-- The services will be dynamically injected here by JavaScript -->
-           </section>
+        <div id="services-container" class="services-grid">
+            <!-- Services will be dynamically injected by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>Cybersecurity Insights</h2>
+            <p class="section-description">Stay informed about the latest threats, vulnerabilities, and best practices in cybersecurity.</p>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog/ransomware-trends.jpg" alt="Ransomware Trends">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">May 10, 2025</span>
+                        <h3>Ransomware Trends in 2025: What Organizations Need to Know</h3>
+                        <p>The landscape of ransomware attacks has evolved significantly. Learn about the latest tactics being employed and how to protect your organization.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog/zero-trust.jpg" alt="Zero Trust Architecture">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">April 28, 2025</span>
+                        <h3>Implementing Zero Trust Architecture for Small Businesses</h3>
+                        <p>Zero trust doesn't have to be complicated or expensive. Discover how small businesses can implement this security model effectively.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog/ai-threats.jpg" alt="AI in Cybersecurity">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">April 15, 2025</span>
+                        <h3>The Double-Edged Sword: AI in Modern Cybersecurity</h3>
+                        <p>How artificial intelligence is being used both by defenders and attackers in the evolving cybersecurity landscape.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-cta">
+                <a href="#" class="btn-secondary">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators Section -->
+    <section class="trust-indicators">
+        <div class="container">
+            <h2>Trusted By Organizations Worldwide</h2>
+            
+            <div class="certifications">
+                <div class="certification-item">
+                    <img src="images/certifications/iso-27001.png" alt="ISO 27001 Certified">
+                    <p>ISO 27001 Certified</p>
+                </div>
+                <div class="certification-item">
+                    <img src="images/certifications/cissp.png" alt="CISSP Certified Professionals">
+                    <p>CISSP Certified Team</p>
+                </div>
+                <div class="certification-item">
+                    <img src="images/certifications/ceh.png" alt="CEH Certified">
+                    <p>Certified Ethical Hackers</p>
+                </div>
+                <div class="certification-item">
+                    <img src="images/certifications/pci-dss.png" alt="PCI DSS Compliant">
+                    <p>PCI DSS Compliant</p>
+                </div>
+            </div>
+            
+            <div class="client-logos">
+                <div class="client-logo">
+                    <img src="images/clients/client1.png" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/client2.png" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/client3.png" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/client4.png" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/client5.png" alt="Client Logo">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
-    <section class="contact">
+    <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <p>Email: contact@darkopshub.com | Phone: (+254) 791 965 548 | (+254) 716 318 743</p>
+        <p>Email: <a href="mailto:contact@darkopshub.com">contact@darkopshub.com</a> | Phone: (+254) 791 965 548 | (+254) 716 318 743</p>
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 DarkOpsHub. All rights reserved.</p>
+        <p>&copy; 2025 DarkOpsHub. All rights reserved.</p>
         <div class="socials">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
         </div>
     </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
     <script src="scripts.js"></script>
 </body>
 </html>
